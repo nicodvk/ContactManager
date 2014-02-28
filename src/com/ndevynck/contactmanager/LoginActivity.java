@@ -1,10 +1,10 @@
 package com.ndevynck.contactmanager;
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.Menu;
 
 import com.ndevynck.androidproject.R;
-
-import android.os.Bundle;
-import android.app.Activity;
-import android.view.Menu;
+import com.ndevynck.eiwd306.Provider;
 
 public class LoginActivity extends Activity {
 
