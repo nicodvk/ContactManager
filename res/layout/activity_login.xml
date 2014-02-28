@@ -9,8 +9,65 @@
     tools:context=".LoginActivity" >
 
     <TextView
+        android:id="@+id/LoginTitleTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="71dp"
+        android:text="@string/login_title"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/LoginET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/LoginTitleTV"
+        android:layout_marginRight="37dp"
+        android:layout_marginTop="73dp"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/PasswordET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/LoginET"
+        android:layout_below="@+id/LoginET"
+        android:layout_marginTop="77dp"
+        android:ems="10"
+        android:inputType="textPassword" />
+
+    <TextView
+        android:id="@+id/LoginTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/LoginET"
+        android:layout_below="@+id/LoginTitleTV"
+        android:layout_marginTop="38dp"
+        android:text="@string/login_label"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/ConnectBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/PasswordET"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="37dp"
+        android:text="@string/button_connexion" />
+
+    <TextView
+        android:id="@+id/PasswordTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/LoginET"
+        android:layout_below="@+id/LoginET"
+        android:layout_marginTop="39dp"
+        android:text="@string/password_label"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 
 </RelativeLayout>
