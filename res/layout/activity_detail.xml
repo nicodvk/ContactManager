@@ -1,0 +1,71 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".DetailActivity" >
+
+    <TextView
+        android:id="@+id/DetailLastnameTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/DetailFirstnameTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/DetailLastnameTV"
+        android:layout_below="@+id/DetailLastnameTV"
+        android:layout_marginTop="19dp"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/DetailZipcodeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/DetailSexTV"
+        android:layout_marginLeft="28dp"
+        android:layout_toRightOf="@+id/DetailFirstnameTV"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/DetailStreetTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/DetailFirstnameTV"
+        android:layout_alignLeft="@+id/DetailZipcodeTV"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/DetailTownTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/DetailZipcodeTV"
+        android:layout_alignBottom="@+id/DetailZipcodeTV"
+        android:layout_marginLeft="22dp"
+        android:layout_toRightOf="@+id/DetailZipcodeTV"
+        android:text="TextView" />
+
+    <ListView
+        android:id="@+id/DetailAbilitiesLV"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/DetailSexTV" >
+
+    </ListView>
+
+    <TextView
+        android:id="@+id/DetailSexTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/DetailFirstnameTV"
+        android:layout_marginTop="14dp"
+        android:text="TextView" />
+
+</RelativeLayout>
