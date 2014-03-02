@@ -20,6 +20,7 @@ public class LoginActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_login);
+		setTitle("Interface de connexion");
 		
 		Button btn = (Button)findViewById(R.id.ConnectBtn);
 		btn.setOnClickListener(new View.OnClickListener() {
@@ -33,7 +34,9 @@ public class LoginActivity extends Activity {
 				if(user != null) {
 					Intent intent = new Intent(LoginActivity.this, SearchActivity.class);
 					intent.putExtra("Pseudo", user.getPseudo());
+
 					startActivity(intent);
+					finish();
 				} else {
 					Toast t = Toast.makeText(getApplicationContext(), "Login et/ou mot de passe invalide(s)", Toast.LENGTH_SHORT);
 					t.show();
