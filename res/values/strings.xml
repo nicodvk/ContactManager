@@ -9,5 +9,8 @@
     <string name="password_label">Mot de passe : </string>
     <string name="button_connexion">Se Connecter</string>
     <string name="title_activity_search">SearchActivity</string>
+    <string name="search_label">"Recherche de personnes : "</string>
+    <string name="btn_search">Rechercher</string>
+    <string name="search_person">Trouver une personne par son nom...</string>
 
 </resources>
