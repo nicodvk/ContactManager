@@ -23,6 +23,8 @@ public class LoginActivity extends Activity {
 		setContentView(R.layout.activity_login);
 		setTitle("Interface de connexion");
 		
+		final InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+		
 		login = (EditText)findViewById(R.id.LoginET);
 		password = (EditText)findViewById(R.id.PasswordET);
 		
@@ -45,9 +47,7 @@ public class LoginActivity extends Activity {
 			}
 		});
 
-		final InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
 		login.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-			
 			@Override
 			public void onFocusChange(View v, boolean hasFocus) {
 				if(!hasFocus) {
@@ -57,8 +57,6 @@ public class LoginActivity extends Activity {
 		});	
 		
 		password.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-			
-			@Override
 			public void onFocusChange(View v, boolean hasFocus) {
 				if(!hasFocus) {
 					imm.hideSoftInputFromWindow(password.getWindowToken(), 0);

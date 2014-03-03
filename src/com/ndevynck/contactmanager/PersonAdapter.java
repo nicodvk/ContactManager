@@ -13,22 +13,22 @@ import android.widget.TextView;
 public class PersonAdapter extends ArrayAdapter<Person>{
 
 	Activity activity;
-
+	TextView lastname, firstname;
+	View view;
 	public PersonAdapter(Activity context, int resource, List<Person> objects) {
 		super(context, resource, objects);
-		
 		this.activity = context;
 	}
 	
 	public View getView(int position, View convertView, ViewGroup parent) {
-		View view = activity.getLayoutInflater().inflate(R.layout.person_template, null);
-		
 		final Person currentPerson = getItem(position);
 		
-		TextView lastname = (TextView) view.findViewById(R.id.LastnameTV);
-		lastname.setText(currentPerson.getLastname());
+		view = activity.getLayoutInflater().inflate(R.layout.person_template, null);
 		
-		TextView firstname = (TextView) view.findViewById(R.id.FirstnameTV);
+		lastname = (TextView) view.findViewById(R.id.LastnameTV);
+		firstname = (TextView) view.findViewById(R.id.FirstnameTV);
+		
+		lastname.setText(currentPerson.getLastname());
 		firstname.setText(currentPerson.getFirstname());
 		
 		return view;

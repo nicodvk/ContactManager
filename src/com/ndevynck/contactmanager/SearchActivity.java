@@ -15,7 +15,6 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.Toast;
 
 public class SearchActivity extends Activity {
 	
@@ -26,29 +25,23 @@ public class SearchActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
     	setContentView(R.layout.activity_search);
-    	setTitle("Interface de recherche de personne");
-    	
-		Toast.makeText(getApplicationContext(), "Bienvenue " + getIntent().getStringExtra("Pseudo"), Toast.LENGTH_LONG).show();		
-		
+    	setTitle("Bienvenue " + getIntent().getStringExtra("Pseudo"));
+	
 		List<Person> person = Provider.getAllPeople();
+		final EditText searchForm = (EditText)findViewById(R.id.searchET);
 		
 		PersonAdapter adapter = new PersonAdapter(this, R.layout.person_template, person);
 		listview = (ListView)findViewById(R.id.PersonLV);
 		listview.setAdapter(adapter);
 		
-		final EditText searchForm = (EditText)findViewById(R.id.searchET);
-		
 		searchForm.addTextChangedListener(new TextWatcher() {
-			
-			@Override
 			public void onTextChanged(CharSequence s, int start, int before, int count) {
-				List<Person> person =  Provider.searchPerson(searchForm.getText().toString(), "");
+				List<Person> person = Provider.searchPerson(searchForm.getText().toString(), "");
 				
 				PersonAdapter adapter = new PersonAdapter(SearchActivity.this, R.layout.person_template, person);
 				listview.setAdapter(adapter);
 			}
 			
-			@Override
 			public void beforeTextChanged(CharSequence s, int start, int count,
 					int after) {	
 			}
@@ -58,9 +51,7 @@ public class SearchActivity extends Activity {
 			}
 		});
 		
-		ListView lv = (ListView)findViewById(R.id.PersonLV);
-		
-		lv.setOnItemClickListener(new OnItemClickListener() {
+		listview.setOnItemClickListener(new OnItemClickListener() {
 
 			@Override
 			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
@@ -68,11 +59,9 @@ public class SearchActivity extends Activity {
 				
 				Person p = (Person) arg0.getItemAtPosition(arg2);
 			
-				Intent intent = new Intent(SearchActivity.this, DetailActivity.class);
-				intent.putExtra("Person_id", p.getId());
+				Intent intent = new Intent(SearchActivity.this, DetailActivity.class).putExtra("Person_id", p.getId());
 				
 				startActivity(intent);
-				
 			}
 		});
 	}
