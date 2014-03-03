@@ -36,7 +36,15 @@ public class SearchActivity extends Activity {
 		
 		searchForm.addTextChangedListener(new TextWatcher() {
 			public void onTextChanged(CharSequence s, int start, int before, int count) {
-				List<Person> person = Provider.searchPerson(searchForm.getText().toString(), "");
+				String lastname;
+				if (searchForm.getText().toString().length() == 1){
+					lastname = searchForm.getText().toString().toUpperCase();
+				} else if (searchForm.getText().toString().length() > 1){
+					lastname = searchForm.getText().toString().substring(0, 1).toUpperCase() + searchForm.getText().toString().substring(1).toLowerCase();
+				} else {
+					lastname = "";
+				}
+				List<Person> person = Provider.searchPerson(lastname, "");
 				
 				PersonAdapter adapter = new PersonAdapter(SearchActivity.this, R.layout.person_template, person);
 				listview.setAdapter(adapter);

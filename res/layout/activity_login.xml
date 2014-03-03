@@ -2,14 +2,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center_vertical|center_horizontal"
     android:clickable="true"
     android:focusable="true"
-    android:padding="5dp"
     android:focusableInTouchMode="true"
     android:orientation="vertical"
+    android:padding="5dp"
     tools:context=".LoginActivity" >
 
-	<requestFocus />
+	<LinearLayout
+	    android:layout_width="wrap_content"
+	    android:layout_height="fill_parent"
+	    android:layout_gravity="center"
+	    android:gravity="center"
+	    android:orientation="vertical" >
 
 	<TextView
 	    android:id="@+id/LoginTV"
@@ -50,6 +56,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
+        android:gravity="center"
         android:text="@string/button_connexion" />
 
+	</LinearLayout>
 </LinearLayout>
