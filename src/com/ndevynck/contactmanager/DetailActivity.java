@@ -49,5 +49,4 @@ public class DetailActivity extends Activity {
 		getMenuInflater().inflate(R.menu.detail, menu);
 		return true;
 	}
-
 }

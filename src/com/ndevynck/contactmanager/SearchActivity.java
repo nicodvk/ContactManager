@@ -1,12 +1,8 @@
 package com.ndevynck.contactmanager;
 
 import java.util.List;
-import java.util.zip.Inflater;
-
 import com.ndevynck.eiwd306.Provider;
 import com.ndevynck.eiwd306.classes.Person;
-import com.ndevynck.eiwd306.classes.User;
-
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
@@ -15,7 +11,6 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.EditText;
