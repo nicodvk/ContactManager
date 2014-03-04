@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#1F1F1F"
     android:orientation="vertical"
     tools:context=".DetailActivity" >
 
@@ -22,6 +23,7 @@
 		       android:layout_width="wrap_content"
 		       android:layout_height="wrap_content"
 		       android:layout_gravity="left"
+		       android:textColor="#F1F1F1"
 		       android:text="Large Text"
 		       android:textAppearance="?android:attr/textAppearanceLarge" />
 		
@@ -31,6 +33,7 @@
 		        android:layout_height="wrap_content"
 		        android:layout_gravity="left"
 		        android:layout_marginLeft="10dp"
+		        android:textColor="#F1F1F1"
 		        android:text="Medium Text"
 		        android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -40,21 +43,24 @@
 		    android:id="@+id/DetailStreetTV"
 		    android:layout_width="fill_parent"
 		    android:layout_height="wrap_content"
-		    android:text="TextView" 
+		    android:text="TextView"
+		    android:textColor="#F1F1F1" 
 		    android:textAppearance="?android:attr/textAppearanceMedium"/>
 
 	    <TextView
 	        android:id="@+id/DetailZipcodeTV"
 	        android:layout_width="fill_parent"
 	        android:layout_height="wrap_content"
-	        android:text="TextView" 
+	        android:text="TextView"
+	        android:textColor="#F1F1F1" 
 	        android:textAppearance="?android:attr/textAppearanceMedium"/>
 	
 	    <TextView
 	        android:id="@+id/DetailTownTV"
 	        android:layout_width="fill_parent"
 	        android:layout_height="wrap_content"
-	        android:text="TextView" 
+	        android:text="TextView"
+	        android:textColor="#F1F1F1" 
 	        android:textAppearance="?android:attr/textAppearanceMedium"/>
 	    
 	    <TextView
@@ -62,6 +68,7 @@
 	        android:layout_width="fill_parent"
 	        android:layout_height="wrap_content"
 	        android:text="TextView" 
+	        android:textColor="#F1F1F1"
 	        android:textAppearance="?android:attr/textAppearanceMedium" />
 	</LinearLayout>
 
@@ -69,6 +76,8 @@
         android:id="@+id/DetailAbilitiesLV"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
+        android:textColor="#F1F1F1"
+        android:background="#1F1F1F"
         android:layout_weight="33" >
 
     </ListView>

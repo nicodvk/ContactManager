@@ -5,6 +5,7 @@ import com.ndevynck.eiwd306.classes.Person;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.graphics.Color;
 import android.view.Menu;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -43,7 +44,8 @@ public class DetailActivity extends Activity {
 		else
 			sex.setText("Femme");
 		
-		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, p.getAbilities());
+//		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.abilities_template, p.getAbilities());
+		AbilityAdapter adapter = new AbilityAdapter(this, R.layout.abilities_template, p.getAbilities());
 		abilities.setAdapter(adapter);
 	}
 

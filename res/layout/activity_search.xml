@@ -1,6 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/SearchET"
+    android:background="#1F1F1F"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     tools:context=".SearchActivity" >
@@ -11,12 +12,14 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="@string/search_person"
+        android:textColor="#F1F1F1"
         android:inputType="textVisiblePassword" />
 
     <ListView
         android:id="@+id/PersonLV"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:textColor="#F1F1F1"
         android:layout_below="@+id/searchET" >
     </ListView>
 </RelativeLayout>

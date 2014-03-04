@@ -7,6 +7,7 @@
     android:focusable="true"
     android:focusableInTouchMode="true"
     android:orientation="vertical"
+    android:background="#1F1F1F"
     android:padding="5dp"
     tools:context=".LoginActivity" >
 
@@ -22,6 +23,7 @@
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
 	    android:text="@string/login_label"
+	    android:textColor="#F1F1F1"
 	    android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <EditText
@@ -29,8 +31,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:textColor="#F1F1F1"
         android:inputType="text" >
-
+        <requestFocus />
     </EditText>
 
     <TextView
@@ -38,6 +41,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
+        android:textColor="#F1F1F1"
         android:text="@string/password_label"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -45,10 +49,9 @@
         android:id="@+id/PasswordET"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="#F1F1F1"
         android:ems="10"
         android:inputType="textPassword" >
-
-        <requestFocus />
     </EditText>
 
     <Button
@@ -56,6 +59,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
+        android:textColor="#F1F1F1"
         android:gravity="center"
         android:text="@string/button_connexion" />
 

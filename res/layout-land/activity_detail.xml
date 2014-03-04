@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
+    android:background="#1F1F1F"
     tools:context=".DetailActivity" >
 
 	<LinearLayout
@@ -15,6 +16,7 @@
 	       android:id="@+id/DetailLastnameTV"
 	       android:layout_width="fill_parent"
 	       android:layout_height="wrap_content"
+	       android:textColor="#F1F1F1"
 	       android:text="Large Text"
 	       android:textAppearance="?android:attr/textAppearanceLarge" />
 	
@@ -22,6 +24,7 @@
 	        android:id="@+id/DetailFirstnameTV"
 	        android:layout_width="fill_parent"
 	        android:layout_height="wrap_content"
+	        android:textColor="#F1F1F1"
 	        android:text="Medium Text"
 	        android:textAppearance="?android:attr/textAppearanceMedium" />
 	
@@ -29,24 +32,28 @@
 	        android:id="@+id/DetailZipcodeTV"
 	        android:layout_width="fill_parent"
 	        android:layout_height="wrap_content"
+	        android:textColor="#F1F1F1"
 	        android:text="TextView" />
 	
 	    <TextView
 	        android:id="@+id/DetailStreetTV"
 	        android:layout_width="fill_parent"
 	        android:layout_height="wrap_content"
+	        android:textColor="#F1F1F1"
 	        android:text="TextView" />
 	
 	    <TextView
 	        android:id="@+id/DetailTownTV"
 	        android:layout_width="fill_parent"
 	        android:layout_height="wrap_content"
+	        android:textColor="#F1F1F1"
 	        android:text="TextView" />
 	    
 	    <TextView
 	        android:id="@+id/DetailSexTV"
 	        android:layout_width="fill_parent"
 	        android:layout_height="wrap_content"
+	        android:textColor="#F1F1F1"
 	        android:text="TextView" />
 	</LinearLayout>
 
