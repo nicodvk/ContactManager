@@ -26,7 +26,7 @@ public class AbilityAdapter extends ArrayAdapter<String>{
 		final String currentAbility = getItem(position);
 		
 		view = activity.getLayoutInflater().inflate(R.layout.abilities_template, null);
-		ability = (TextView) view.findViewById(R.id.Ability);
+		ability = (TextView) view.findViewById(R.id.PersonTpl);
 		ability.setText(currentAbility.toString());
 		
 		return view;

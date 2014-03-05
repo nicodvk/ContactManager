@@ -16,7 +16,7 @@
         android:src="@drawable/user_icon" />
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/lastnameSTV"
         android:layout_width="fill_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center"

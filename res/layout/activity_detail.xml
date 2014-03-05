@@ -9,77 +9,128 @@
 	<LinearLayout
 	    android:layout_width="fill_parent"
 	    android:layout_height="fill_parent"
-	    android:layout_weight="100"
-	    android:orientation="vertical" >
+	    android:layout_weight="66"
+	    android:orientation="horizontal" >
 
-		<LinearLayout
+		<ImageView
+		    android:id="@+id/Avatar"
 		    android:layout_width="fill_parent"
-		    android:layout_height="wrap_content"
-		    android:layout_gravity="left"
-		    android:orientation="horizontal" >
+		    android:layout_height="fill_parent"
+		    android:layout_weight="66"
+		    android:src="@drawable/ic_action_send" />
 
-		   <TextView
-		       android:id="@+id/DetailLastnameTV"
-		       android:layout_width="wrap_content"
-		       android:layout_height="wrap_content"
-		       android:layout_gravity="left"
-		       android:textColor="#F1F1F1"
-		       android:text="Large Text"
-		       android:textAppearance="?android:attr/textAppearanceLarge" />
-		
-		    <TextView
-		        android:id="@+id/DetailFirstnameTV"
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
-		        android:layout_gravity="left"
-		        android:layout_marginLeft="10dp"
-		        android:textColor="#F1F1F1"
-		        android:text="Medium Text"
-		        android:textAppearance="?android:attr/textAppearanceLarge" />
+		<RelativeLayout
+		    android:layout_width="wrap_content"
+		    android:layout_height="fill_parent"
+		    android:layout_weight="33" >
 
-		</LinearLayout>
+	    <TextView
+	        android:id="@+id/DetailFirstnameTV"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="10dp"
+	        android:text="Medium Text"
+	        android:textAppearance="?android:attr/textAppearanceLarge"
+	        android:textColor="#F1F1F1" />
 
-		<TextView
-		    android:id="@+id/DetailStreetTV"
-		    android:layout_width="fill_parent"
-		    android:layout_height="wrap_content"
-		    android:text="TextView"
-		    android:textColor="#F1F1F1" 
-		    android:textAppearance="?android:attr/textAppearanceMedium"/>
+	    <TextView
+	        android:id="@+id/DetailLastnameTV"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@id/DetailFirstnameTV"
+	        android:layout_below="@id/DetailFirstnameTV"
+	        android:text="Large Text"
+	        android:textAppearance="?android:attr/textAppearanceLarge"
+	        android:textColor="#F1F1F1" />
+
+	    <TextView
+	        android:id="@+id/DetailStreetTV"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@id/DetailFirstnameTV"
+	        android:layout_below="@id/DetailLastnameTV"
+	        android:text="TextView"
+	        android:textAppearance="?android:attr/textAppearanceMedium"
+	        android:textColor="#F1F1F1" />
 
 	    <TextView
 	        android:id="@+id/DetailZipcodeTV"
 	        android:layout_width="fill_parent"
 	        android:layout_height="wrap_content"
+	        android:layout_below="@id/DetailStreetTV"
+	        android:layout_alignLeft="@id/DetailFirstnameTV"
 	        android:text="TextView"
-	        android:textColor="#F1F1F1" 
-	        android:textAppearance="?android:attr/textAppearanceMedium"/>
-	
+	        android:textAppearance="?android:attr/textAppearanceMedium"
+	        android:textColor="#F1F1F1" />
+
 	    <TextView
 	        android:id="@+id/DetailTownTV"
 	        android:layout_width="fill_parent"
 	        android:layout_height="wrap_content"
+	        android:layout_below="@id/DetailZipcodeTV"
+	        android:layout_alignLeft="@id/DetailFirstnameTV"
 	        android:text="TextView"
-	        android:textColor="#F1F1F1" 
-	        android:textAppearance="?android:attr/textAppearanceMedium"/>
-	    
+	        android:textAppearance="?android:attr/textAppearanceMedium"
+	        android:textColor="#F1F1F1" />
+
 	    <TextView
 	        android:id="@+id/DetailSexTV"
 	        android:layout_width="fill_parent"
 	        android:layout_height="wrap_content"
-	        android:text="TextView" 
-	        android:textColor="#F1F1F1"
-	        android:textAppearance="?android:attr/textAppearanceMedium" />
+	        android:layout_below="@id/DetailTownTV"
+			android:layout_alignLeft="@id/DetailFirstnameTV"
+	        android:text="TextView"
+	        android:textAppearance="?android:attr/textAppearanceMedium"
+	        android:textColor="#F1F1F1" />
+
+	    </RelativeLayout>
 	</LinearLayout>
 
-    <ListView
-        android:id="@+id/DetailAbilitiesLV"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:textColor="#F1F1F1"
-        android:background="#1F1F1F"
-        android:layout_weight="33" >
+	<LinearLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:layout_gravity="fill"
+	    android:layout_weight="33"
+	    android:gravity="fill"
+	    android:orientation="vertical" >
 
-    </ListView>
+		<TextView
+		    android:id="@+id/Telephone"
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    android:layout_weight="10"
+		    android:gravity="center_vertical"
+		    android:text="TextView"
+		    android:textColor="#F1F1F1" />
 
+		<TextView
+		    android:id="@+id/Description"
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    android:layout_weight="10"
+		    android:gravity="center_vertical"
+		    android:text="TextView"
+		    android:textColor="#F1F1F1" />
+
+		<TextView
+		    android:id="@+id/textView1"
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    android:layout_weight="10"
+		    android:gravity="center_vertical"
+		    android:text="@string/abilities"
+		    android:textColor="#F1F1F1"
+		    android:textStyle="bold" />
+
+	    <ListView
+	        android:id="@+id/DetailAbilitiesLV"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:layout_weight="6"
+	        android:background="#1F1F1F"
+	        android:fadingEdge="none"
+	        android:textColor="#F1F1F1" >
+	
+	    </ListView>
+	</LinearLayout>
 </LinearLayout>

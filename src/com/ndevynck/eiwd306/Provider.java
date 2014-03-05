@@ -48,6 +48,8 @@ public class Provider {
 		
 		person = new Person();
 		person.setId(peopleContext.size());
+		person.setAvatar("http://png-1.findicons.com/files/icons/1072/face_avatars/300/i04.png");
+		person.setEmail("robert@martin.fr");
 		person.setAddress(address);
 		person.setFirstname("Robert");
 		person.setLastname("Martin");
@@ -75,6 +77,8 @@ public class Provider {
 		person.setAddress(address);
 		person.setFirstname("George");
 		person.setLastname("Durant");
+		person.setAvatar("http://findicons.com/files/icons/1072/face_avatars/300/a02.png");
+		person.setEmail("george@durant.fr");
 		person.setMale(true);
 		person.setPhoneNumber("0600000000");
 		person.setDescription("Developpeur microsoft");
@@ -98,6 +102,8 @@ public class Provider {
 		person.setAddress(address);
 		person.setFirstname("Michel");
 		person.setLastname("Denis");
+		person.setAvatar("http://findicons.com/files/icons/1072/face_avatars/300/i02.png");
+		person.setEmail("michel@denis.fr");
 		person.setMale(true);
 		person.setPhoneNumber("0600000000");
 		person.setDescription("Developpeur microsoft");
@@ -121,6 +127,8 @@ public class Provider {
 		person.setAddress(address);
 		person.setFirstname("Frederic");
 		person.setLastname("Milano");
+		person.setAvatar("http://findicons.com/files/icons/1072/face_avatars/300/g05.png");
+		person.setEmail("frederic@milano.fr");
 		person.setMale(true);
 		person.setPhoneNumber("0600000000");
 		person.setDescription("Chef de projet technique");
@@ -144,6 +152,8 @@ public class Provider {
 		person.setAddress(address);
 		person.setFirstname("Lisat");
 		person.setLastname("Matisse");
+		person.setAvatar("http://findicons.com/files/icons/1072/face_avatars/300/i02.png");
+		person.setEmail("Lisat@matisse.fr");
 		person.setMale(false);
 		person.setPhoneNumber("0600000000");
 		person.setDescription("Chef de projet");
@@ -167,6 +177,8 @@ public class Provider {
 		person.setAddress(address);
 		person.setFirstname("Tiphaine");
 		person.setLastname("Legarek");
+		person.setAvatar("http://findicons.com/files/icons/1072/face_avatars/300/i02.png");
+		person.setEmail("tiphaine@legarek.fr");
 		person.setMale(false);
 		person.setPhoneNumber("0600000000");
 		person.setDescription("Chef de projet technique");
@@ -190,6 +202,8 @@ public class Provider {
 		person.setAddress(address);
 		person.setFirstname("Marc");
 		person.setLastname("Vandenbusch");
+		person.setAvatar("http://findicons.com/files/icons/1072/face_avatars/300/i02.png");
+		person.setEmail("marc@vandenbusch.fr");
 		person.setMale(false);
 		person.setPhoneNumber("0600000000");
 		person.setDescription("Chef de projet");
@@ -213,6 +227,8 @@ public class Provider {
 		person.setAddress(address);
 		person.setFirstname("Gislaine");
 		person.setLastname("Gallois");
+		person.setAvatar("http://findicons.com/files/icons/1072/face_avatars/300/i02.png");
+		person.setEmail("gislaine@gallois.fr");
 		person.setMale(true);
 		person.setPhoneNumber("0600000000");
 		person.setDescription("Comptable");
@@ -236,6 +252,8 @@ public class Provider {
 		person.setAddress(address);
 		person.setFirstname("Audrey");
 		person.setLastname("Leval");
+		person.setAvatar("http://findicons.com/files/icons/1072/face_avatars/300/i02.png");
+		person.setEmail("audrey@leval.fr");
 		person.setMale(false);
 		person.setPhoneNumber("0600000000");
 		person.setDescription("Assistante agence");
@@ -259,6 +277,8 @@ public class Provider {
 		person.setAddress(address);
 		person.setFirstname("John");
 		person.setLastname("Gleek");
+		person.setAvatar("http://findicons.com/files/icons/1072/face_avatars/300/i02.png");
+		person.setEmail("john@gleek.fr");
 		person.setMale(true);
 		person.setPhoneNumber("0600000000");
 		person.setDescription("Directeur agence");
@@ -282,6 +302,8 @@ public class Provider {
 		person.setAddress(address);
 		person.setFirstname("Jean Claude");
 		person.setLastname("Convenan");
+		person.setAvatar("http://findicons.com/files/icons/1072/face_avatars/300/i02.png");
+		person.setEmail("jc@convenan.fr");
 		person.setMale(true);
 		person.setPhoneNumber("0600000000");
 		person.setDescription("Commercial");
@@ -305,6 +327,8 @@ public class Provider {
 		person.setAddress(address);
 		person.setFirstname("Melodie");
 		person.setLastname("Galard");
+		person.setAvatar("http://findicons.com/files/icons/1072/face_avatars/300/i02.png");
+		person.setEmail("melodie@galard.fr");
 		person.setMale(false);
 		person.setPhoneNumber("0600000000");
 		person.setDescription("RH");
@@ -328,6 +352,8 @@ public class Provider {
 		person.setAddress(address);
 		person.setFirstname("Alain");
 		person.setLastname("Li");
+		person.setAvatar("http://findicons.com/files/icons/1072/face_avatars/300/i02.png");
+		person.setEmail("alain@li.fr");
 		person.setMale(true);
 		person.setPhoneNumber("0600000000");
 		person.setDescription("RH");
@@ -351,6 +377,8 @@ public class Provider {
 		person.setAddress(address);
 		person.setFirstname("Claire");
 		person.setLastname("Pilaud");
+		person.setAvatar("http://findicons.com/files/icons/1072/face_avatars/300/i02.png");
+		person.setEmail("claire@pilaud.fr");
 		person.setMale(true);
 		person.setPhoneNumber("0600000000");
 		person.setDescription("DRH");
@@ -374,6 +402,8 @@ public class Provider {
 		person.setAddress(address);
 		person.setFirstname("Karim");
 		person.setLastname("Balid");
+		person.setAvatar("http://findicons.com/files/icons/1072/face_avatars/300/i02.png");
+		person.setEmail("karim@balid.fr");
 		person.setMale(true);
 		person.setPhoneNumber("0600000000");
 		person.setDescription("Developpeur microsoft");
@@ -396,6 +426,8 @@ public class Provider {
 		person.setAddress(address);
 		person.setFirstname("Antoine");
 		person.setLastname("Malle");
+		person.setAvatar("http://findicons.com/files/icons/1072/face_avatars/300/i02.png");
+		person.setEmail("antoine@malle.fr");
 		person.setMale(true);
 		person.setPhoneNumber("0600000000");
 		person.setDescription("DBA");

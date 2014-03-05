@@ -11,7 +11,10 @@
     <string name="title_activity_search">SearchActivity</string>
     <string name="search_label">"Recherche de personnes : "</string>
     <string name="btn_search">Rechercher</string>
-    <string name="search_person">Trouver une personne par son nom...</string>
+    <string name="search_person_lastname">Nom</string>
     <string name="title_activity_detail">DetailActivity</string>
+    <string name="title_activity_result">ResultActivity</string>
+    <string name="search_person_firstname">Prénom</string>
+    <string name="abilities">Capacités :</string>
 
 </resources>

@@ -6,7 +6,7 @@ public class Person {
 //	Fields
 	private int id;
 	private boolean male;
-	private String lastname, firstname, phoneNumber, description;
+	private String lastname, firstname, phoneNumber, description, avatar, email;
 	private Address address;
 	private final ArrayList<String> abilities = new ArrayList<String>();
 	
@@ -56,5 +56,17 @@ public class Person {
 	
 	public ArrayList<String> getAbilities() {
 		return abilities;
+	}
+	public String getAvatar() {
+		return avatar;
+	}
+	public void setAvatar(String avatar) {
+		this.avatar = avatar;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
 	}
 }

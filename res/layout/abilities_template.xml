@@ -6,12 +6,12 @@
     android:orientation="vertical" >
 
 <TextView
-    android:id="@+id/Ability"
+    android:id="@+id/PersonTpl"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:gravity="center_vertical"
     android:text="test"
     android:textColor="#F1F1F1"
-    android:textSize="30sp" />
+    android:textSize="15sp" />
 
 </LinearLayout>

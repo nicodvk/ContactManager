@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
+    android:padding="5sp"
     android:background="#1F1F1F"
     tools:context=".DetailActivity" >
 
@@ -12,57 +13,102 @@
 	    android:layout_weight="66"
 	    android:orientation="vertical" >
 
-	   <TextView
-	       android:id="@+id/DetailLastnameTV"
-	       android:layout_width="fill_parent"
-	       android:layout_height="wrap_content"
-	       android:textColor="#F1F1F1"
-	       android:text="Large Text"
-	       android:textAppearance="?android:attr/textAppearanceLarge" />
-	
+	    <ImageView
+	        android:id="@+id/Avatar"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="5sp"
+	        android:layout_marginTop="5sp"
+	        android:scaleType="centerCrop"
+	        android:src="@drawable/ic_action_send" />
+
+	    <TextView
+	        android:id="@+id/DetailLastnameTV"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="Large Text"
+	        android:textAppearance="?android:attr/textAppearanceLarge"
+	        android:textColor="#F1F1F1" />
+
 	    <TextView
 	        android:id="@+id/DetailFirstnameTV"
 	        android:layout_width="fill_parent"
 	        android:layout_height="wrap_content"
-	        android:textColor="#F1F1F1"
 	        android:text="Medium Text"
-	        android:textAppearance="?android:attr/textAppearanceMedium" />
-	
+	        android:textAppearance="?android:attr/textAppearanceMedium"
+	        android:textColor="#F1F1F1" />
+
 	    <TextView
 	        android:id="@+id/DetailZipcodeTV"
 	        android:layout_width="fill_parent"
 	        android:layout_height="wrap_content"
-	        android:textColor="#F1F1F1"
-	        android:text="TextView" />
-	
+	        android:text="TextView"
+	        android:textColor="#F1F1F1" />
+
 	    <TextView
 	        android:id="@+id/DetailStreetTV"
 	        android:layout_width="fill_parent"
 	        android:layout_height="wrap_content"
-	        android:textColor="#F1F1F1"
-	        android:text="TextView" />
-	
+	        android:text="TextView"
+	        android:textColor="#F1F1F1" />
+
 	    <TextView
 	        android:id="@+id/DetailTownTV"
 	        android:layout_width="fill_parent"
 	        android:layout_height="wrap_content"
-	        android:textColor="#F1F1F1"
-	        android:text="TextView" />
-	    
+	        android:text="TextView"
+	        android:textColor="#F1F1F1" />
+
 	    <TextView
 	        android:id="@+id/DetailSexTV"
 	        android:layout_width="fill_parent"
 	        android:layout_height="wrap_content"
-	        android:textColor="#F1F1F1"
-	        android:text="TextView" />
+	        android:text="TextView"
+	        android:textColor="#F1F1F1" />
 	</LinearLayout>
 
-    <ListView
-        android:id="@+id/DetailAbilitiesLV"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_weight="33" >
+		<LinearLayout
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    android:layout_weight="33"
+		    android:orientation="vertical" >
+	
+			<TextView
+			    android:id="@+id/Telephone"
+			    android:layout_width="fill_parent"
+			    android:layout_height="fill_parent"
+			    android:layout_weight="10"
+			    android:gravity="center_vertical"
+			    android:text="TextView"
+			    android:textColor="#F1F1F1" />
+	
+			<TextView
+			    android:id="@+id/Description"
+			    android:layout_width="fill_parent"
+			    android:layout_height="fill_parent"
+			    android:layout_marginTop="8dp"
+			    android:layout_weight="10"
+			    android:gravity="center_vertical"
+			    android:text="TextView"
+			    android:textColor="#F1F1F1" />
 
-    </ListView>
+			<TextView
+			    android:id="@+id/textView1"
+			    android:layout_width="fill_parent"
+			    android:layout_height="fill_parent"
+			    android:layout_weight="10"
+			    android:gravity="center_vertical"
+			    android:text="@string/abilities"
+			    android:textColor="#F1F1F1"
+			    android:textStyle="bold" />
+	
+		    <ListView
+		        android:id="@+id/DetailAbilitiesLV"
+		        android:layout_width="fill_parent"
+		        android:layout_height="fill_parent"
+		        android:layout_marginTop="10dp"
+		        android:layout_weight="7" >
 
+		    </ListView>
+		</LinearLayout>
 </LinearLayout>

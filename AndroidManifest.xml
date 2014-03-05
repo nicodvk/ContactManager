@@ -3,7 +3,7 @@
     package="com.ndevynck.contactmanager"
     android:versionCode="1"
     android:versionName="1.0" >
-
+	<uses-permission android:name="android.permission.INTERNET" />
     <uses-sdk
         android:minSdkVersion="10"
         android:targetSdkVersion="19" />
@@ -22,8 +22,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="com.ndevynck.contactmanager.LoginActivity">
+        <activity android:name="com.ndevynck.contactmanager.LoginActivity" >
         </activity>
         <activity
             android:name="com.ndevynck.contactmanager.SearchActivity"
@@ -32,6 +31,10 @@
         <activity
             android:name="com.ndevynck.contactmanager.DetailActivity"
             android:label="@string/title_activity_detail" >
+        </activity>
+        <activity
+            android:name="com.ndevynck.contactmanager.ResultActivity"
+            android:label="@string/title_activity_result" >
         </activity>
     </application>
 

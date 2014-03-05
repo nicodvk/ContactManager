@@ -1,77 +1,80 @@
 package com.ndevynck.contactmanager;
 
-import java.util.List;
-import com.ndevynck.eiwd306.Provider;
-import com.ndevynck.eiwd306.classes.Person;
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ListView;
+import android.widget.Toast;
 
 public class SearchActivity extends Activity {
 	
-	ListView listview;
+	Button btn;
+	EditText firstnameET, lastnameET;
+	String lastname, firstname;
 	
-	@SuppressLint("CutPasteId")
-	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
     	setContentView(R.layout.activity_search);
-    	setTitle("Bienvenue " + getIntent().getStringExtra("Pseudo"));
-	
-		List<Person> person = Provider.getAllPeople();
-		final EditText searchForm = (EditText)findViewById(R.id.searchET);
+    	setTitle("Interface de recherche");
+    	
+		lastnameET = (EditText)findViewById(R.id.lastnameSET);
+		firstnameET = (EditText)findViewById(R.id.firstnameSET);
+    	
+    	if(getIntent().getStringExtra("Pseudo") != null)
+    		Toast.makeText(getApplicationContext(), "Bienvenue " + getIntent().getStringExtra("Pseudo"), Toast.LENGTH_SHORT).show();
 		
-		PersonAdapter adapter = new PersonAdapter(this, R.layout.person_template, person);
-		listview = (ListView)findViewById(R.id.PersonLV);
-		listview.setAdapter(adapter);
-		
-		searchForm.addTextChangedListener(new TextWatcher() {
-			public void onTextChanged(CharSequence s, int start, int before, int count) {
-				String lastname;
-				if (searchForm.getText().toString().length() == 1){
-					lastname = searchForm.getText().toString().toUpperCase();
-				} else if (searchForm.getText().toString().length() > 1){
-					lastname = searchForm.getText().toString().substring(0, 1).toUpperCase() + searchForm.getText().toString().substring(1).toLowerCase();
-				} else {
-					lastname = "";
-				}
-				List<Person> person = Provider.searchPerson(lastname, "");
-				
-				PersonAdapter adapter = new PersonAdapter(SearchActivity.this, R.layout.person_template, person);
-				listview.setAdapter(adapter);
-			}
-			
-			public void beforeTextChanged(CharSequence s, int start, int count,
-					int after) {	
-			}
-			
-			@Override
-			public void afterTextChanged(Editable s) {
-			}
-		});
-		
-		listview.setOnItemClickListener(new OnItemClickListener() {
+    	btn = (Button)findViewById(R.id.searchBtn);
+    	
+    	btn.setOnClickListener(new View.OnClickListener(){
 
 			@Override
-			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
-					long arg3) {
+			public void onClick(View v) {		
+				if (lastnameET.getText().toString().length() == 1)
+					lastname = lastnameET.getText().toString().toUpperCase();
+				else if (lastnameET.getText().toString().length() > 1)
+					lastname = lastnameET.getText().toString().substring(0, 1).toUpperCase() + lastnameET.getText().toString().substring(1).toLowerCase();
+				else
+					lastname = "";
 				
-				Person p = (Person) arg0.getItemAtPosition(arg2);
-			
-				Intent intent = new Intent(SearchActivity.this, DetailActivity.class).putExtra("Person_id", p.getId());
+				if (firstnameET.getText().toString().length() == 1)
+					firstname = firstnameET.getText().toString().toUpperCase();
+				else if (firstnameET.getText().toString().length() > 1)
+					firstname = firstnameET.getText().toString().substring(0, 1).toUpperCase() + firstnameET.getText().toString().substring(1).toLowerCase();
+				else 
+					firstname = "";
+				
+				Intent intent = new Intent(SearchActivity.this, ResultActivity.class)
+								.putExtra("lastname", lastname)
+								.putExtra("firstname", firstname);
 				
 				startActivity(intent);
 			}
-		});
+    	});
+    	
+		final InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+    	
+    	lastnameET.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+			@Override
+			public void onFocusChange(View v, boolean hasFocus) {
+				if(!hasFocus) {
+					imm.hideSoftInputFromWindow(lastnameET.getWindowToken(), 0);
+				}
+			}
+		});	
+		
+    	firstnameET.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+			public void onFocusChange(View v, boolean hasFocus) {
+				if(!hasFocus) {
+					imm.hideSoftInputFromWindow(firstnameET.getWindowToken(), 0);
+				}
+			}
+		});	
 	}
 
 	@Override

@@ -1,25 +1,61 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/SearchET"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="#1F1F1F"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
     tools:context=".SearchActivity" >
 
+    <TextView
+        android:id="@+id/lastnameSTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/search_person_lastname"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#F1F1F1" />
+
     <EditText
-        android:id="@+id/searchET"
-        android:layout_width="fill_parent"
+        android:id="@+id/lastnameSET"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="@string/search_person"
-        android:textColor="#F1F1F1"
-        android:inputType="textVisiblePassword" />
+        android:hint="@string/search_person_lastname"
+        android:inputType="text"
+        android:textColor="#F1F1F1" >
 
-    <ListView
-        android:id="@+id/PersonLV"
-        android:layout_width="fill_parent"
+        <requestFocus android:layout_width="wrap_content" />
+
+    </EditText>
+
+    <TextView
+        android:id="@+id/firstnameSTV"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#F1F1F1"
-        android:layout_below="@+id/searchET" >
-    </ListView>
-</RelativeLayout>
+        android:layout_marginTop="21dp"
+        android:text="@string/search_person_firstname"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#F1F1F1" />
+
+    <EditText
+        android:id="@+id/firstnameSET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/search_person_firstname"
+        android:inputType="text"
+        android:textColor="#F1F1F1" />
+
+    <Button
+        android:id="@+id/searchBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/btn_search"
+        android:textAlignment="center" />
+
+</LinearLayout>

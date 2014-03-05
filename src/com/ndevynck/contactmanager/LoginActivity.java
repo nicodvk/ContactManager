@@ -36,8 +36,8 @@ public class LoginActivity extends Activity {
 				
 				User user = Provider.login(login.getText().toString(), password.getText().toString());
 				if(user != null) {
-					Intent intent = new Intent(LoginActivity.this, SearchActivity.class);
-					intent.putExtra("Pseudo", user.getPseudo());
+					Intent intent = new Intent(LoginActivity.this, SearchActivity.class)
+									.putExtra("Pseudo", user.getPseudo());
 
 					startActivity(intent);
 					finish();
